@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Journey Registration</title>
+</h:head>
+<f:view>
+    <h:form>
+        <h:panelGrid columns="2">
+            <f:facet name="header">
+                <h:outputText value="Journey Registration"/>
+            </f:facet>
+
+            <h:outputLabel for="fromAddress" value="Choose your departure address"/>
+            <h:selectOneMenu id="fromAddress" value="#{ctrl.addressA}"
+                             required="true" requiredMessage="Insert number and/or street mandatory">
+                <f:selectItem itemLabel="--Select your departure address--"
+                              noSelectionOption="true"/>
+                <f:selectItems value="#{ctrl.address}" var="a"
+                               itemLabel="#{a.numberStreet}"
+                               itemValue="#{a.idAddress}"/>
+                <f:ajax render="receptionAddressA"/>
+            </h:selectOneMenu>
+
+            <h:outputLabel for="toAddress" value="Choose your arrival address"/>
+            <h:selectOneMenu id="toAddress" value="#{ctrl.addressB}"
+                             required="true" requiredMessage="Insert number and/or street mandatory">
+                <f:selectItem itemLabel="--Select your arrival address--"
+                              noSelectionOption="true"/>
+                <f:selectItems value="#{ctrl.address}" var="b"
+                               itemLabel="#{b.numberStreet}"
+                               itemValue="#{b.idAddress}"/>
+            </h:selectOneMenu>
+            <h:outputLabel for="vehiJourney" value="Select your journey vehicule"/>
+            <h:selectOneMenu id="vehiJourney" value="#{ctrl.vehiJourney}"
+                             required="true" requiredMessage="used vehicule">
+                <f:selectItem itemLabel="--Select your journey vehicule--"
+                              noSelectionOption="true"/>
+                <f:selectItems value="#{ctrl.vehicules}" var="v"
+                               itemLabel="#{v.brand}"
+                               itemValue="#{v.idVehicule}"/>
+            </h:selectOneMenu>
+            <p:outputLabel for="button" value="Date:" />
+            <p:calendar id="button" value="#{ctrl.newJourney.journeyDate}" showOn="button" />
+
+            <h:outputLabel id="reasonJourney" value="Reason for travel"/>
+            <h:inputTextarea id="reasonForTravel" value="#{ctrl.newJourney.reasonForTravel}" requiredMessage="Reason for travel Mandatory"/>
+            <h:panelGroup/>
+            <h:commandButton action="#{ctrl.doJourneyReg}"
+                             value="Register Journey"/>
+            <h:panelGroup/>
+        </h:panelGrid>
+    </h:form>
+
+
+    <h:dataTable value="#{ctrl.addressA}" var="a" id="infoAddressa">
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Departure Address" />
+                <h:outputText value="#{ctrl.newJourney.addressA}" id="receptionAddressA"/>
+            </f:facet>
+            <h:outputText value="#{a.numberStreet} #{a.city}"/>
+        </h:column>
+    </h:dataTable>
+    <h:dataTable value="#{ctrl.addressB}" var="b" id="infoAddressb">
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Departure Address" />
+            </f:facet>
+            <h:outputText value="#{b.numberStreet} #{b.city}"/>
+        </h:column>
+    </h:dataTable>
+    <h:dataTable value="#{ctrl.addressB}" var="b" id="infoVehicule">
+        <h:column>
+            <f:facet name="header">
+                <h:outputText value="Vehicule Journey" />
+            </f:facet>
+            <h:outputText value="#{v.brand} #{v.power}"/>
+        </h:column>
+    </h:dataTable>
+    <br></br>
+    <h:form>
+        <h:commandLink action="UserMenu">
+            Acceuil
+        </h:commandLink>
+        <br></br>
+        <h:commandLink action="/index">
+            Log out
+        </h:commandLink>
+    </h:form>
+
+</f:view>
+</html>

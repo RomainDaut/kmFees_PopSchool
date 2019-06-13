@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+<f:view>
+        <h:outputText value="Hi! #{ctrl.ulog.name}"/>
+        <br></br>
+        <br></br>
+        <h:outputText value="What do you want to do today?"/>
+        <br></br>
+        <br></br>
+        <h:form id="formCreate">
+                <c:if test="#{ctrl.ulog.admin==0 || ctrl.ulog.admin==1}">
+                <p:commandButton value="Create a New User" id="CreUser" action="#{ctrl.laUsReg}" style="margin-right:20px;"/>
+                </c:if>
+                <p:commandButton value="Create Address" id="CreAdd" action="#{ctrl.laAdReg}" style="margin-right:20px;"/>
+
+                <p:commandButton value="Create Vehicule" id="CreVeh" action="#{ctrl.laVeReg}" style="margin-right:20px;"/>
+
+                <p:commandButton value="Create Journey" id="CreJourney" action="#{ctrl.laJoReg}" style="margin-right:20px;"/>
+        </h:form>
+        <br></br>
+    <p:dataTable var="ve" value="#{ctrl.ulog.vehicules}" id="tabSelection">
+        <p:column headerText="Id Vehicule">
+            <h:outputText value="#{ve.idVehicule}" />
+        </p:column>
+        <p:column headerText="Brand/Model">
+            <h:outputText value="#{ve.brand}" />
+        </p:column>
+
+        <p:column headerText="Immatriculation">
+            <h:outputText value="#{ve.imma}" />
+        </p:column>
+
+        <p:column headerText="Power">
+            <h:outputText value="#{ve.power}" />
+        </p:column>
+    </p:dataTable>
+        <br></br>
+    <p:dataTable var="ad" value="#{ctrl.address}">
+         <p:column headerText="Id Address">
+             <h:outputText value="#{ad.idAddress}" />
+         </p:column>
+        <p:column headerText="Number/Street">
+            <h:outputText value="#{ad.numberStreet}" />
+        </p:column>
+        <p:column headerText="Postcode">
+            <h:outputText value="#{ad.postcode}" />
+        </p:column>
+        <p:column headerText="City">
+            <h:outputText value="#{ad.city}" />
+        </p:column>
+    </p:dataTable>
+        <br></br>
+    <h:form>
+        <h:commandLink action="UserMenu">
+            Acceuil
+        </h:commandLink>
+        <br></br>
+        <h:commandLink action="/index">
+            Log out
+        </h:commandLink>
+    </h:form>
+</f:view>
+</html>

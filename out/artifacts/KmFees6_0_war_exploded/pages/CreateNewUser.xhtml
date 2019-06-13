@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Address Registration</title>
+</h:head>
+<f:view>
+    <h:form>
+        <h:panelGrid columns="2">
+            <f:facet name="header">
+                <h:outputText value="User Registration"/>
+            </f:facet>
+
+            <h:outputText for="nameInput" value="NewUserName"/>
+            <h:inputText id="nameInput"
+                         value="#{ctrl.newUser.name}"
+                         required="true" requiredMessage="Name Mandatory"
+                         size="20" maxlength="30">
+                <p:ajax update="outName"/>
+            </h:inputText>
+            <h:outputLabel for="surnameInput" value="New User Surname"/>
+            <h:inputText id="surnameInput"
+                         value="#{ctrl.newUser.surname}"
+                         required="true" requiredMessage="Surname Mandatory"
+                         size="20" maxlength="30">
+                <p:ajax update="outSurname"/>
+            </h:inputText>
+            <h:outputLabel for="emailInput" value="Email"/>
+            <h:inputText id="emailInput"
+                         value="#{ctrl.newUser.email}"
+                         required="true" requiredMessage="Email Mandatory"
+                         size="20" maxlength="30">
+                <p:ajax update="outEmail"/>
+            </h:inputText>
+            <h:outputLabel for="passwordInput" value="Password"/>
+            <h:inputText id="passwordInput"
+                         value="#{ctrl.newUser.password}"
+                         required="true" requiredMessage="Email Mandatory"
+                         size="20" maxlength="30">
+                <p:ajax update="outPassword"/>
+            </h:inputText>
+            <h:outputLabel for="rightsInput" value="Rights"/>
+            <h:selectOneRadio id="rightsInput" value = "#{ctrl.newUser.admin}"
+                              required="true" requiredMessage="Rights are mandatory">
+            <f:selectItem itemValue = "0" itemLabel = "SuperAdmin" />
+            <f:selectItem itemValue = "1" itemLabel = "Admin"/>
+            <f:selectItem itemValue = "3" itemLabel = "User"/>
+            </h:selectOneRadio>
+            <h:panelGroup/>
+            <h:commandButton action="#{ctrl.doRegNewUser}"
+                             value="Register User"/>
+            <h:panelGroup/>
+            <h:outputText id="outName" value="#{ctrl.newUser.name}"/>
+            <h:outputText id="outSurname" value="#{ctrl.newUser.surname}"/>
+            <h:outputText id="outEmail" value="#{ctrl.newUser.email}"/>
+            <h:outputText id="outPassword" value="#{ctrl.newUser.password}"/>
+        </h:panelGrid>
+    </h:form>
+    <h:form>
+        <h:commandLink action="UserMenu">
+            Acceuil
+        </h:commandLink>
+        <br></br>
+        <h:commandLink action="/index">
+            Log out
+        </h:commandLink>
+    </h:form>
+</f:view>
+</html>

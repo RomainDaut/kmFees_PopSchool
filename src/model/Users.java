@@ -119,4 +119,15 @@ public class Users implements Serializable {
     public void setVehicules(Collection<Vehicules> vehicules) {
         this.vehicules = vehicules;
     }
+
+    public Users() {
+    }
+
+    public Users(String name, String surname, String email, String password, int admin) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+        this.admin = admin;
+    }
 }

@@ -105,4 +105,14 @@ public class Vehicules implements Serializable {
     public void setUsers(Users users) {
         this.users = users;
     }
+
+    public Vehicules() {
+    }
+
+    public Vehicules(String brand, String vehiType, String imma, String power) {
+        this.brand = brand;
+        this.vehiType = vehiType;
+        this.imma = imma;
+        this.power = power;
+    }
 }

@@ -113,6 +113,17 @@ public class Journeys implements Serializable {
         this.addressB = addressB;
     }
 
+    public Journeys() {
+    }
+
+    public Journeys(String reasonForTravel, Date journeyDate, Vehicules vehicules, Address addressA, Address addressB) {
+        this.reasonForTravel = reasonForTravel;
+        this.journeyDate = journeyDate;
+        this.vehicules = vehicules;
+        this.addressA = addressA;
+        this.addressB = addressB;
+    }
+
     /*public void calculFrais(int ){
 
 

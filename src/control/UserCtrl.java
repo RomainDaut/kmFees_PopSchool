@@ -7,24 +7,23 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.persistence.EntityManager;
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 @ManagedBean(name="ctrl")
 @SessionScoped
 public class UserCtrl implements Serializable {
     private Users ulog;
-    private List<Users> users;
     private Users newUser;
     private List<Address> address;
-    private Address newAddress;
+    private List<Users> users;
     private List<Vehicules> vehicules;
     private Vehicules newVehicule;
     private Journeys newJourney;
-    private String vehiJourney;
-    private String vehiType;
+    private Address newAddress;
     private Address addressA;
     private Address addressB;
+    private String vehiType;
     private int idAddressA;
     private int idAddressB;
     private int idVehicule;
@@ -81,18 +80,9 @@ public class UserCtrl implements Serializable {
     public Address getAddressA() {
         return addressA;
     }
-    public void setAddressA(Address addressA) { this.addressA = addressA;
-    }
-    public Address getAddressB() { return addressB;
-    }
-    public void setAddressB(Address addressB) { this.addressB = addressB;
-    }
-    public String getVehiJourney() {
-        return vehiJourney;
-    }
-    public void setVehiJourney(String vehiJourney) {
-        this.vehiJourney = vehiJourney;
-    }
+    public void setAddressA(Address addressA) { this.addressA = addressA; }
+    public Address getAddressB() { return addressB; }
+    public void setAddressB(Address addressB) { this.addressB = addressB; }
     public Users getNewUser() {
         return newUser;
     }
@@ -176,12 +166,13 @@ public class UserCtrl implements Serializable {
         return "UserMenu";
     }
     public String doJourneyReg(int adA, int adB, int veJ){
-        Address a = Service.getSingleton().AddressAJourney(adA);
-        Address b = Service.getSingleton().AddressBJourney(adB);
+        Address a = Service.getSingleton().AddressJourney(adA);
+        Address b = Service.getSingleton().AddressJourney(adB);
         Vehicules veh = Service.getSingleton().VehiculeJourney(veJ);
         newJourney.setAddressA(a);
         newJourney.setAddressB(b);
         newJourney.setVehicules(veh);
+        newJourney.setJourneyDate(new java.sql.Date(newJourney.getJourneyDate().getTime()));
         Service.getSingleton().createJourney(newJourney);
         return "UserMenu";
     }

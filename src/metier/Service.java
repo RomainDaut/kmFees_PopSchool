@@ -130,18 +130,11 @@ public class Service implements Serializable {
         em.close();
         return vehicules;
     }
-    public Address AddressAJourney(int idAddress){
+    public Address AddressJourney(int idAddress){
         EntityManager em = JPAUtil.getEm();
-        Address adA = em.find(Address.class, idAddress);
+        Address ad = em.find(Address.class, idAddress);
         em.close();
-        return adA;
-    }
-
-    public Address AddressBJourney(int idAddress){
-        EntityManager em = JPAUtil.getEm();
-        Address adB = em.find(Address.class, idAddress);
-        em.close();
-        return adB;
+        return ad;
     }
     public Vehicules VehiculeJourney(int idVehicule){
         EntityManager em = JPAUtil.getEm();

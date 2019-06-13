@@ -101,4 +101,13 @@ public class Address implements Serializable {
     public void setJourneysB(Collection<Journeys> journeysB) {
         this.journeysB = journeysB;
     }
+
+    public Address() {
+    }
+
+    public Address(String numberStreet, String postcode, String city) {
+        this.numberStreet = numberStreet;
+        this.postcode = postcode;
+        this.city = city;
+    }
 }

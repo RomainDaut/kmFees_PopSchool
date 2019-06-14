@@ -9,6 +9,7 @@ import javax.persistence.EntityManager;
 import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
+import java.util.Random;
 
 @ManagedBean(name="ctrl")
 @SessionScoped
@@ -27,6 +28,7 @@ public class UserCtrl implements Serializable {
     private int idAddressA;
     private int idAddressB;
     private int idVehicule;
+    private java.util.Date dateJourney;
 
 
     public UserCtrl() {
@@ -113,6 +115,12 @@ public class UserCtrl implements Serializable {
     public void setIdVehicule(int idVehicule) {
         this.idVehicule = idVehicule;
     }
+    public java.util.Date getDateJourney() {
+        return dateJourney;
+    }
+    public void setDateJourney(java.util.Date dateJourney) {
+        this.dateJourney = dateJourney;
+    }
     //endregion
 
     public String laAdReg(){
@@ -130,28 +138,20 @@ public class UserCtrl implements Serializable {
     }
 
     public String doLogin(){
+        newUser = new Users();
         newAddress = new Address();
         newVehicule = new Vehicules();
         newJourney = new Journeys();
-        EntityManager em = JPAUtil.getEm();
-        em.getTransaction().begin();
-        Users u = em.createNamedQuery("Users.findUserByEmail&Password", Users.class)
-                .setParameter("email", ulog.getEmail().toLowerCase())
-                .setParameter("password", ulog.getPassword())
-                .getSingleResult();
-
+        Users u = Service.getSingleton().findUserbyEmailandPass(ulog.getEmail(), ulog.getPassword());
         if (u.getEmail().toLowerCase().equals(ulog.getEmail().toLowerCase())
                 && u.getPassword().equals(ulog.getPassword())) {
             ulog = u;
-            em.close();
         return "pages/UserMenu";
         }
         else if (u.getEmail().equals("") && u.getPassword().equals("")){
-            em.close();
             return "/index";
         }
         else
-            em.close();
         return "pages/unknownUser";
     }
     public String doAddressReg() {
@@ -165,14 +165,16 @@ public class UserCtrl implements Serializable {
         Service.getSingleton().createVehicule(newVehicule);
         return "UserMenu";
     }
-    public String doJourneyReg(int adA, int adB, int veJ){
-        Address a = Service.getSingleton().AddressJourney(adA);
-        Address b = Service.getSingleton().AddressJourney(adB);
-        Vehicules veh = Service.getSingleton().VehiculeJourney(veJ);
+    public String doJourneyReg(){
+        Address a = Service.getSingleton().AddressJourney(idAddressA);
+        Address b = Service.getSingleton().AddressJourney(idAddressB);
+        Vehicules veh = Service.getSingleton().VehiculeJourney(idVehicule);
         newJourney.setAddressA(a);
         newJourney.setAddressB(b);
         newJourney.setVehicules(veh);
-        newJourney.setJourneyDate(new java.sql.Date(newJourney.getJourneyDate().getTime()));
+        newJourney.setRandomDistance();
+        System.out.println("--------" + newJourney.getDistance());
+        newJourney.setJourneyDate(new java.sql.Date(dateJourney.getTime()));
         Service.getSingleton().createJourney(newJourney);
         return "UserMenu";
     }

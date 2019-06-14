@@ -1013,7 +1013,7 @@
     </column>
     <column id="251" parent="234" name="distance">
       <Position>7</Position>
-      <DataType>int(5)|0s</DataType>
+      <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

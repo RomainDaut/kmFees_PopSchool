@@ -15,7 +15,7 @@
 </f:facet>
 <br></br>
 <f:view>
-    <h:form style="vertical-align: center">
+    <h:form>
     <p:tabView>
     <p:ajax event="tabChange" listener="#{tabbedView.onTabChange}"/>
     <p:ajax event="tabClose" listener="#{tabbedView.onTabClose}"/>
@@ -73,6 +73,11 @@
                 </h:panelGrid>
             </p:tab>
             </c:if>
+    </p:tabView>
+    </h:form>
+
+    <h:form>
+        <p:tabView>
             <p:tab title="Address Registration">
                 <h:panelGrid columns="2">
                     <f:facet name="header">
@@ -134,9 +139,12 @@
                     </h:selectOneRadio>
                     <h:commandButton action="#{ctrl.dovehiReg}"
                                      value="Register Vehicule"/>
-
                 </h:panelGrid>
             </p:tab>
+        </p:tabView>
+    </h:form>
+    <h:form>
+        <p:tabView>
             <p:tab title="Journey Registration">
                 <h:panelGrid columns="2">
                     <f:facet name="header">
@@ -172,7 +180,7 @@
                                        itemValue="#{v.idVehicule}"/>
                     </h:selectOneMenu>
                     <p:outputLabel for="button" value="Date:" />
-                    <p:calendar id="button" value="#{ctrl.newJourney.journeyDate}" showOn="button" />
+                    <p:calendar id="button" value="#{ctrl.dateJourney}" showOn="button" />
 
                     <h:outputLabel id="reasonJourney" value="Reason for travel"/>
                     <h:inputTextarea id="reasonForTravel" value="#{ctrl.newJourney.reasonForTravel}" requiredMessage="Reason for travel Mandatory"/>

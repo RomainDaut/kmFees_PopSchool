@@ -10,11 +10,20 @@ public class Journeys implements Serializable {
     private int idJourney;
     private String reasonForTravel;
     private double cost;
-    private int distance;
+    private Double distance;
     private Date journeyDate;
     private Vehicules vehicules;
     private Address addressA;
     private Address addressB;
+    public Journeys() {
+    }
+    public Journeys(String reasonForTravel, Date journeyDate, Vehicules vehicules, Address addressA, Address addressB) {
+        this.reasonForTravel = reasonForTravel;
+        this.journeyDate = journeyDate;
+        this.vehicules = vehicules;
+        this.addressA = addressA;
+        this.addressB = addressB;
+    }
 
     @Id
     @Column(name = "idJourney")
@@ -47,13 +56,15 @@ public class Journeys implements Serializable {
     }
 
     @Basic
-    @Column(name = "distance", nullable = true)
-    public int getDistance() {
+    @Column(name = "distance")
+    public double getDistance() {
         return distance;
     }
-
-    public void setDistance(int distance) {
+    public void setDistance(double distance) {
         this.distance = distance;
+    }
+    public void setRandomDistance(){
+        this.distance = Math.random()*240;
     }
 
     @Basic
@@ -61,7 +72,6 @@ public class Journeys implements Serializable {
     public Date getJourneyDate() {
         return journeyDate;
     }
-
     public void setJourneyDate(Date journeyDate) {
         this.journeyDate = journeyDate;
     }
@@ -110,17 +120,6 @@ public class Journeys implements Serializable {
     }
 
     public void setAddressB(Address addressB) {
-        this.addressB = addressB;
-    }
-
-    public Journeys() {
-    }
-
-    public Journeys(String reasonForTravel, Date journeyDate, Vehicules vehicules, Address addressA, Address addressB) {
-        this.reasonForTravel = reasonForTravel;
-        this.journeyDate = journeyDate;
-        this.vehicules = vehicules;
-        this.addressA = addressA;
         this.addressB = addressB;
     }
 

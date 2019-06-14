@@ -4,6 +4,7 @@ import model.*;
 import util.JPAUtil;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -98,7 +99,7 @@ public class Service implements Serializable {
         return usersall;
     }
     public Users findUserbyEmailandPass(String email, String password) {
-        EntityManager em = JPAUtil.getEm();
+        EntityManager em = JPAUtil.getEmf().createEntityManager();
         Users user = em.createNamedQuery("Users.findUserByEmail&Password", Users.class)
                 .setParameter("email", email)
                 .setParameter("password", password)

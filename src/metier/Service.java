@@ -124,9 +124,10 @@ public class Service implements Serializable {
         em.close();
         return address;
     }
-    public List<Vehicules> findAllVehi(){
+    public List<Vehicules> findAllVehiByUser(Users user){
         EntityManager em = JPAUtil.getEm();
-        List <Vehicules> vehicules = em.createNamedQuery("findAllVehicules", Vehicules.class)
+        List <Vehicules> vehicules = em.createNamedQuery("findAllVehiculesByUser", Vehicules.class)
+                .setParameter("user", user)
                 .getResultList();
         em.close();
         return vehicules;

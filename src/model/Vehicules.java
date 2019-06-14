@@ -8,7 +8,8 @@ import java.util.Objects;
 @Entity
 @NamedQueries({
         @NamedQuery(name = "findAllVehicules", query = "select v from Vehicules v"),
-        @NamedQuery(name = "findAllVehByBrand", query = "select v from Vehicules v where upper(v.brand)=:brand ")
+        @NamedQuery(name = "findAllVehByBrand", query = "select v from Vehicules v where upper(v.brand)=:brand "),
+        @NamedQuery(name = "findAllVehiculesByUser", query = "select v from Vehicules v where v.users= :user")
 })
 public class Vehicules implements Serializable {
 

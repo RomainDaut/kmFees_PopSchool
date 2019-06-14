@@ -7,26 +7,26 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui"
       xmlns:c="http://java.sun.com/jsp/jstl/core">
+
 <h:head>
     <title>Main Menu</title>
 </h:head>
 <f:facet name="logo">
-    <h:graphicImage style="vertical-align: center" value="/Users/RowShaman/IntelliJ Workspace/KmFees6.0/web/img/PopSchool.png"/>
+    <h:graphicImage value="../img/PopSchool.png"/>
 </f:facet>
 <br></br>
 <f:view>
-    <h:form>
     <p:tabView>
     <p:ajax event="tabChange" listener="#{tabbedView.onTabChange}"/>
     <p:ajax event="tabClose" listener="#{tabbedView.onTabClose}"/>
-        <h:outputText style="vertical-align: center" value="Welcome #{ctrl.ulog.name} what do you want to do today?"/>
-            <c:if test="#{ctrl.ulog.admin==0 || ctrl.ulog.admin==1}">
+
+        <c:if test="#{ctrl.ulog.admin==0 || ctrl.ulog.admin==1}">
             <p:tab title="User Registration">
+                <h:form>
                 <h:panelGrid columns="2">
                     <f:facet name="header">
                         <h:outputText value="User Registration"/>
                     </f:facet>
-
                     <h:outputText for="nameInput" value="UserName"/>
                     <h:inputText id="nameInput"
                                  value="#{ctrl.newUser.name}"
@@ -71,14 +71,11 @@
                     <h:outputText id="outEmail" value="#{ctrl.newUser.email}"/>
                     <h:outputText id="outPassword" value="#{ctrl.newUser.password}"/>
                 </h:panelGrid>
+                </h:form>
             </p:tab>
-            </c:if>
-    </p:tabView>
-    </h:form>
-
-    <h:form>
-        <p:tabView>
+        </c:if>
             <p:tab title="Address Registration">
+                <h:form>
                 <h:panelGrid columns="2">
                     <f:facet name="header">
                         <h:outputText value="Address Registration"/>
@@ -104,48 +101,51 @@
                                      value="Register Address"/>
                     <h:panelGroup/>
                 </h:panelGrid>
+                </h:form>
             </p:tab>
-            <p:tab title="Vehicule Registration">
-                <h:panelGrid columns="2">
-                    <f:facet name="header">
-                        <h:outputText value="Vehicule Registration"/>
-                    </f:facet>
+        <p:tab title="Vehicule Registration">
+            <h:form>
+                    <h:panelGrid columns="2">
+                        <f:facet name="header">
+                            <h:outputText value="Vehicule Registration"/>
+                        </f:facet>
+                <f:facet name="header">
+                    <h:outputText value="Vehicule Type"/>
+                </f:facet>
+                <h:outputLabel for="typeInput" value="Insert Vehicule type"/>
+                <h:selectOneRadio id="typeInput" value = "#{ctrl.newVehicule.vehiType}"
+                                  required="true" requiredMessage="Vehicule Type mandatory">
+                    <f:selectItem itemValue = "Motorcycle" itemLabel = "Motorcycle" />
+                    <f:selectItem itemValue = "Car" itemLabel = "Car"/>
+                    <f:selectItem itemValue = "Bicycle" itemLabel = "Bicycle"/>
+                </h:selectOneRadio>
+                        <h:outputLabel for="brandInput" value="Insert Vehicule Brand"/>
+                        <h:inputText id="brandInput"
+                                     value="#{ctrl.newVehicule.brand}"
+                                     required="true" requiredMessage="Vehicule Brand mandatory"
+                                     size="20" maxlength="30"/>
+                        <h:outputLabel for="immaInput" value="Insert Immatriculation"/>
+                        <h:inputText id="immaInput"
+                                     value="#{ctrl.newVehicule.imma}"
+                                     required="true" requiredMessage="Immatriculation Mandatory"
+                                     size="20" maxlength="30"/>
+                        <h:outputLabel for="powerInput" value="Insert Vehicule Power"/>
+                        <h:selectOneRadio id="powerInput" value = "#{ctrl.newVehicule.power}"
+                                          required="true" requiredMessage="Vehicule Power Mandatory">
+                            <f:selectItem itemValue = "3" itemLabel = "3cv or less" />
+                            <f:selectItem itemValue = "4" itemLabel = "4cv"/>
+                            <f:selectItem itemValue = "5" itemLabel = "5cv"/>
+                            <f:selectItem itemValue = "6" itemLabel = "6cv"/>
+                            <f:selectItem itemValue = "7" itemLabel = "7cv"/>
+                        </h:selectOneRadio>
+                        <h:commandButton action="#{ctrl.dovehiReg}"
+                                         value="Register Vehicule"/>
+                    </h:panelGrid>
+            </h:form>
+        </p:tab>
 
-                    <h:outputLabel for="typeInput" value="Insert Vehicule type"/>
-                    <h:selectOneRadio id="typeInput" value = "#{ctrl.newVehicule.vehiType}"
-                                      required="true" requiredMessage="Vehicule Type mandatory">
-                        <f:selectItem itemValue = "Motorcycle" itemLabel = "Motorcycle" />
-                        <f:selectItem itemValue = "Car" itemLabel = "Car"/>
-                        <f:selectItem itemValue = "Bicycle" itemLabel = "Bicycle"/>
-                    </h:selectOneRadio>
-                    <h:outputLabel for="brandInput" value="Insert Vehicule Brand"/>
-                    <h:inputText id="brandInput"
-                                 value="#{ctrl.newVehicule.brand}"
-                                 required="true" requiredMessage="Vehicule Brand mandatory"
-                                 size="20" maxlength="30"/>
-                    <h:outputLabel for="immaInput" value="Insert Immatriculation"/>
-                    <h:inputText id="immaInput"
-                                 value="#{ctrl.newVehicule.imma}"
-                                 required="true" requiredMessage="Immatriculation Mandatory"
-                                 size="20" maxlength="30"/>
-                    <h:outputLabel for="powerInput" value="Insert Vehicule Power"/>
-                    <h:selectOneRadio id="powerInput" value = "#{ctrl.newVehicule.power}"
-                                      required="true" requiredMessage="Vehicule Power Mandatory">
-                        <f:selectItem itemValue = "3" itemLabel = "3cv or less" />
-                        <f:selectItem itemValue = "4" itemLabel = "4cv"/>
-                        <f:selectItem itemValue = "5" itemLabel = "5cv"/>
-                        <f:selectItem itemValue = "6" itemLabel = "6cv"/>
-                        <f:selectItem itemValue = "7" itemLabel = "7cv"/>
-                    </h:selectOneRadio>
-                    <h:commandButton action="#{ctrl.dovehiReg}"
-                                     value="Register Vehicule"/>
-                </h:panelGrid>
-            </p:tab>
-        </p:tabView>
-    </h:form>
-    <h:form>
-        <p:tabView>
             <p:tab title="Journey Registration">
+                <h:form>
                 <h:panelGrid columns="2">
                     <f:facet name="header">
                         <h:outputText value="Journey Registration"/>
@@ -189,12 +189,10 @@
                                      value="Register Journey"/>
                     <h:panelGroup/>
                 </h:panelGrid>
+                </h:form>
             </p:tab>
         </p:tabView>
-    </h:form>
-</f:view>
-<f:view>
-    <p:dataTable var="ve" value="#{ctrl.ulog.vehicules}" id="tabSelection">
+    <p:dataTable var="ve" value="#{ctrl.vehicules}" id="tabSelection">
         <p:column headerText="Id Vehicule">
             <h:outputText value="#{ve.idVehicule}" />
         </p:column>

@@ -56,7 +56,7 @@ public class UserCtrl implements Serializable {
         this.address = address;
     }
     public List<Vehicules> getVehicules() {
-        return this.vehicules=Service.getSingleton().findAllVehi();
+        return this.vehicules=Service.getSingleton().findAllVehiByUser(ulog);
     }
     public void setVehicules(List<Vehicules> vehicules) {
         this.vehicules = vehicules;
@@ -163,6 +163,7 @@ public class UserCtrl implements Serializable {
     public String dovehiReg() {
         newVehicule.setUsers(ulog);
         Service.getSingleton().createVehicule(newVehicule);
+        vehicules = Service.getSingleton().findAllVehiByUser(ulog);
         return "UserMenu";
     }
     public String doJourneyReg(){

@@ -123,8 +123,27 @@ public class Journeys implements Serializable {
         this.addressB = addressB;
     }
 
-    /*public void calculFrais(int ){
+    public void costCalc(){
+        double c[] = {0.451,0.518,0.543,0.568,0.595};
+        double nb = 0.00;
+        if(vehicules.getVehiType().equals("Car")){
 
+            int pow = Integer.parseInt(vehicules.getPower());
+             nb = c[pow-3] * this.getDistance();
 
-    }*/
+        }else if(vehicules.getVehiType().equals("Motorcycle")){
+            if(vehicules.getPower().equals("1,2")){
+                nb = 0.338 * distance;
+            }else if(vehicules.getPower().equals("3,5")){
+                nb = 0.338 * distance;
+            }else if(vehicules.getPower().equals("5+")){
+                nb = 0.400 * distance;
+            }
+        }else if(vehicules.getVehiType().equals("Bicycle")){
+            nb = 0.269 * distance;
+        }
+        this.cost = (double) Math.round(nb * 100) / 100;
+        /*this.isPayed = false;*/
+    }
+
 }

@@ -174,7 +174,7 @@ public class UserCtrl implements Serializable {
         newJourney.setAddressB(b);
         newJourney.setVehicules(veh);
         newJourney.setRandomDistance();
-        System.out.println("--------" + newJourney.getDistance());
+        newJourney.costCalc();
         newJourney.setJourneyDate(new java.sql.Date(dateJourney.getTime()));
         Service.getSingleton().createJourney(newJourney);
         return "UserMenu";

@@ -10,13 +10,13 @@
 
 <h:head>
     <title>Main Menu</title>
+    <h:graphicImage library="img" value="../resources/img/PopSchool.png" styleClass="imgMenu"/>
 </h:head>
-<f:facet name="logo">
-    <h:graphicImage value="../img/PopSchool.png"/>
-</f:facet>
 <br></br>
 <f:view>
-    <p:tabView>
+    <h:outputStylesheet library="css" name="Style.css" />
+
+    <p:tabView styleClass="tab" orientation="center">
     <p:ajax event="tabChange" listener="#{tabbedView.onTabChange}"/>
     <p:ajax event="tabClose" listener="#{tabbedView.onTabClose}"/>
 
@@ -192,6 +192,8 @@
                 </h:form>
             </p:tab>
         </p:tabView>
+
+
     <p:dataTable var="ve" value="#{ctrl.vehicules}" id="tabSelection">
         <p:column headerText="Id Vehicule">
             <h:outputText value="#{ve.idVehicule}" />
@@ -224,10 +226,10 @@
         </p:column>
     </p:dataTable>
         <br></br>
-    <h:form style="align-content: space-evenly">
-        <p:commandButton value="Acceuil"  id="Ajax" action="UserMenu" style="margin-right:20px;" styleClass="ui-priority-primary" />
+    <h:form>
+        <p:commandButton value="Acceuil" action="UserMenu"/>
         <br></br>
-        <p:commandButton value="Log Out" id="nonAjax" action="/index" style="margin-right:20px;" ajax="false" />
+        <p:commandButton value="Log Out" action="/index"/>
     </h:form>
 </f:view>
 </html>

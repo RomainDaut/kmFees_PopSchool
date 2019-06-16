@@ -1,0 +1,37 @@
+.input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 30px color(#77B756);
+    border-radius: 10px;
+    width: 250px;
+    height: 30px;
+}
+.log{
+    position: page;
+    text-align:center;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: auto;
+}
+.imgMenu{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: auto;
+}
+.bouton{
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+.tab{
+}

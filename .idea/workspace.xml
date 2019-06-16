@@ -7,8 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8f1bebe-73a2-40e2-9d30-ce93decfd0ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/control/UserCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/control/UserCtrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Journeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Journeys.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/css/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/WEB-INF/classes/control/UserCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/WEB-INF/classes/control/UserCtrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/img/PopSchool.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/pages/UserMenu.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/pages/UserMenu.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/KmFees6.0/control/UserCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KmFees6.0/control/UserCtrl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/PopSchool.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/img/PopSchool.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/UserMenu.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/UserMenu.xhtml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,19 +67,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.xhtml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/pages/UserMenu.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="357">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/UserCtrl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
+            <state relative-caret-position="1653">
               <caret line="176" column="30" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -81,61 +98,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Vehicules.java">
+        <entry file="file://$PROJECT_DIR$/src/model/Address.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="10" column="114" selection-start-line="10" selection-start-column="114" selection-end-line="10" selection-end-column="114" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/metier/Service.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2688">
-              <caret line="136" column="55" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/UserMenu.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3717">
-              <caret line="177" column="53" selection-start-line="177" selection-start-column="53" selection-end-line="177" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/JPAUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="378">
+              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/MainTest.java">
+        <entry file="file://$PROJECT_DIR$/web/resources/css/Style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Journeys.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="557">
-              <caret line="146" selection-start-line="146" selection-end-line="146" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="735">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -147,6 +125,7 @@
       <list>
         <option value="Class" />
         <option value="jsf" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -159,6 +138,9 @@
       <find>&lt;/p:tabView&gt;</find>
       <find>tabView</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/web/img</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -179,14 +161,18 @@
         <option value="$PROJECT_DIR$/web/pages/JourneyReg.xhtml" />
         <option value="$PROJECT_DIR$/src/control/TabChanged.java" />
         <option value="$PROJECT_DIR$/web/pages/CreateNewUser.xhtml" />
-        <option value="$PROJECT_DIR$/web/index.xhtml" />
         <option value="$PROJECT_DIR$/src/util/JPAUtil.java" />
         <option value="$PROJECT_DIR$/web/pages/RegVehicule.xhtml" />
-        <option value="$PROJECT_DIR$/web/pages/UserMenu.xhtml" />
         <option value="$PROJECT_DIR$/src/model/Vehicules.java" />
         <option value="$PROJECT_DIR$/src/metier/Service.java" />
         <option value="$PROJECT_DIR$/src/model/Journeys.java" />
         <option value="$PROJECT_DIR$/src/control/UserCtrl.java" />
+        <option value="$PROJECT_DIR$/web/CSS/UserMenu.xhtml" />
+        <option value="$PROJECT_DIR$/web/CSS/main.css" />
+        <option value="$PROJECT_DIR$/web/resources/css/Style.css.xhtml" />
+        <option value="$PROJECT_DIR$/web/index.xhtml" />
+        <option value="$PROJECT_DIR$/web/resources/css/Style.css" />
+        <option value="$PROJECT_DIR$/web/pages/UserMenu.xhtml" />
       </list>
     </option>
   </component>
@@ -206,6 +192,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,48 +203,17 @@
             <path>
               <item name="KmFees6.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="KmFees6.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KmFees6.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="KmFees6.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="control" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KmFees6.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KmFees6.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KmFees6.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KmFees6.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="metier" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KmFees6.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KmFees6.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KmFees6.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KmFees6.0" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KmFees6.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="KmFees6.0" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KmFees6.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KmFees6.0" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KmFees6.0" type="b2602c69:ProjectViewProjectNode" />
@@ -271,7 +227,6 @@
       </pane>
       <pane id="Course" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,6 +237,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -298,6 +254,9 @@
       <recent name="model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/resources" />
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/web/img" />
     </key>
   </component>
@@ -393,18 +352,28 @@
       <workItem from="1560447760054" duration="478000" />
       <workItem from="1560448357388" duration="1108000" />
       <workItem from="1560456021401" duration="10466000" />
-      <workItem from="1560515232134" duration="2139000" />
+      <workItem from="1560515232134" duration="4857000" />
+      <workItem from="1560672740137" duration="3440000" />
+      <workItem from="1560715358548" duration="8897000" />
     </task>
+    <task id="LOCAL-00001" summary="Cost working My maaaaaaan">
+      <created>1560517523534</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560517523534</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40185000" />
+    <option name="totallyTimeSpent" value="55240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49840763" visible="true" weight="0.21123321" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49840763" visible="true" weight="0.21611722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.50159234" side_tool="true" weight="0.20879121" />
@@ -416,8 +385,8 @@
       <window_info id="Web" order="9" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38969874" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.23809524" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38969874" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.23809524" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -443,10 +412,10 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20879121" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49840763" visible="true" weight="0.21611722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
-      <window_info id="Persistence" order="3" side_tool="true" />
+      <window_info id="Persistence" order="3" sideWeight="0.50159234" side_tool="true" weight="0.20879121" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
@@ -455,8 +424,8 @@
       <window_info id="Web" order="9" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38969874" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.23809524" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38969874" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.23809524" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -467,7 +436,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32944608" />
       <window_info anchor="bottom" id="Messages" order="15" weight="0.32750243" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.32847425" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -524,6 +493,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cost working My maaaaaaan" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cost working My maaaaaaan" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../KmFeesJSF/src/model/Journeys.java">
@@ -610,9 +583,6 @@
     <entry file="file://$PROJECT_DIR$/web/pages/AddressReg.xhtml" />
     <entry file="file://$PROJECT_DIR$/web/pages/JourneyReg.xhtml" />
     <entry file="file://$PROJECT_DIR$/web/pages/VehiculeReg.xhtml" />
-    <entry file="file://$PROJECT_DIR$/web/img/PopSchool.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Users.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -645,13 +615,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/RegVehicule.xhtml" />
-    <entry file="file://$PROJECT_DIR$/src/model/Address.java">
+    <entry file="file://$PROJECT_DIR$/web/CSS/UserMenu.xhtml" />
+    <entry file="file://$PROJECT_DIR$/web/CSS/Css.css" />
+    <entry file="file://$PROJECT_DIR$/web/CSS/main.css" />
+    <entry file="file://$PROJECT_DIR$/src/model/Vehicules.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="147">
+          <caret line="10" column="114" selection-start-line="10" selection-start-column="114" selection-end-line="10" selection-end-column="114" />
         </state>
       </provider>
     </entry>
@@ -659,13 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2688">
           <caret line="136" column="55" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/UserMenu.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3717">
-          <caret line="177" column="53" selection-start-line="177" selection-start-column="53" selection-end-line="177" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -686,23 +649,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Vehicules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="10" column="114" selection-start-line="10" selection-start-column="114" selection-end-line="10" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Journeys.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
+        <state relative-caret-position="2247">
           <caret line="146" selection-start-line="146" selection-end-line="146" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -710,13 +659,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/css/Style.css.xhtml" />
+    <entry file="file://$PROJECT_DIR$/web/resources/img/PopSchool.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/control/UserCtrl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
+        <state relative-caret-position="1653">
           <caret line="176" column="30" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/css/Style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/UserMenu.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>

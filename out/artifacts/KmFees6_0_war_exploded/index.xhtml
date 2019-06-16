@@ -4,33 +4,30 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 <h:head>
     <title>Login</title>
+
 </h:head>
-<h:form>
-   <h3>LOGIN</h3>
-   <h:outputText value="Email" />
-   <h:inputText id="userEmail" value="#{ctrl.ulog.email}"></h:inputText>
-   <h:message for="userEmail"></h:message>
-   <br></br>
-   <br></br>
-   <h:outputText value="Password" />
-   <h:inputSecret id="password" value="#{ctrl.ulog.password}"></h:inputSecret>
-   <h:message for="password"></h:message>
-   <br></br>
-   <br></br>
-   <h:commandButton action="#{ctrl.doLogin}"
-                    value="Login"/>
-</h:form>
+<h:graphicImage library="img" value="resources/img/PopSchool.png" styleClass="img"/>
+<f:view>
+
     <br></br>
-    <h:form>
-        <h:commandLink action="UserMenu">
-            Acceuil
-        </h:commandLink>
-        <br></br>
-        <h:commandLink action="/index">
-            Log out
-        </h:commandLink>
+    <h:outputStylesheet library="css" name="Style.css" />
+    <h:form styleClass="log">
+         <span class="log">
+        <h:outputText value="Email" style="color: #22285D;"/>
+   <h:inputText id="userEmail" value="#{ctrl.ulog.email}" a:placeholder="Your Email" styleClass="input"></h:inputText>
+   <br></br>
+   <h:outputText value="Password" style="color: #22285D;" />
+             <h:inputSecret id="password" value="#{ctrl.ulog.password}" a:placeholder="Your Password" styleClass="input"></h:inputSecret>
+   <br></br>
+   <p:commandButton action="#{ctrl.doLogin}"
+                    value="Login" style="color: #22285D;" styleClass="bouton"/>
+        </span>
     </h:form>
+
+</f:view>
 </html>

@@ -7,16 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8f1bebe-73a2-40e2-9d30-ce93decfd0ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/resources/css/Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/WEB-INF/classes/control/UserCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/WEB-INF/classes/control/UserCtrl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/img/PopSchool.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/pages/UserMenu.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/KmFees6_0_war_exploded/pages/UserMenu.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/KmFees6.0/control/UserCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/KmFees6.0/control/UserCtrl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/PopSchool.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/img/PopSchool.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/UserMenu.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/UserMenu.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/css/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/css/Style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/pages/UserMenu.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="420">
+              <caret line="20" column="66" lean-forward="true" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -79,20 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/control/UserCtrl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1653">
-              <caret line="176" column="30" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="291">
+              <caret line="20" column="57" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -112,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/resources/css/Style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="296">
+              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -220,6 +200,12 @@
               <item name="KmFees6.0" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KmFees6.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KmFees6.0" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -354,7 +340,7 @@
       <workItem from="1560456021401" duration="10466000" />
       <workItem from="1560515232134" duration="4857000" />
       <workItem from="1560672740137" duration="3440000" />
-      <workItem from="1560715358548" duration="8897000" />
+      <workItem from="1560715358548" duration="10254000" />
     </task>
     <task id="LOCAL-00001" summary="Cost working My maaaaaaan">
       <created>1560517523534</created>
@@ -367,16 +353,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55240000" />
+    <option name="totallyTimeSpent" value="56597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49840763" visible="true" weight="0.21611722" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4968153" visible="true" weight="0.21611722" />
+      <window_info id="Structure" order="1" sideWeight="0.50318474" side_tool="true" weight="0.21611722" />
       <window_info id="Designer" order="2" />
-      <window_info id="Persistence" order="3" sideWeight="0.50159234" side_tool="true" weight="0.20879121" />
+      <window_info id="Persistence" order="3" sideWeight="0.50318474" side_tool="true" weight="0.21611722" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
@@ -412,10 +398,10 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49840763" visible="true" weight="0.21611722" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4968153" visible="true" weight="0.21611722" />
+      <window_info id="Structure" order="1" sideWeight="0.50318474" side_tool="true" weight="0.21611722" />
       <window_info id="Designer" order="2" />
-      <window_info id="Persistence" order="3" sideWeight="0.50159234" side_tool="true" weight="0.20879121" />
+      <window_info id="Persistence" order="3" sideWeight="0.50318474" side_tool="true" weight="0.21611722" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="UI Designer" order="6" />
@@ -424,7 +410,7 @@
       <window_info id="Web" order="9" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38969874" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38969874" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.23809524" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -673,6 +659,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/css/Style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Address.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -683,24 +676,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/resources/css/Style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        <state relative-caret-position="291">
+          <caret line="20" column="57" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/UserMenu.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="420">
+          <caret line="20" column="66" lean-forward="true" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
         </state>
       </provider>
     </entry>

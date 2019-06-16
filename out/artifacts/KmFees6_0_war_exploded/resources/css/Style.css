@@ -7,6 +7,7 @@
     border-radius: 10px;
     width: 250px;
     height: 30px;
+    font-size: 18px;
 }
 .log{
     position: page;
@@ -28,9 +29,11 @@
     width: auto;
 }
 .bouton{
-    border-radius: 10px;
+    border-radius: 20px;
     width: 150px;
     height: 50px;
+    color: #22285D;
+    font-size: 18px;
 }
 
 .tab{

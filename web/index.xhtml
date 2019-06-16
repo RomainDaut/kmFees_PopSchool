@@ -17,17 +17,15 @@
     <br></br>
     <h:outputStylesheet library="css" name="Style.css" />
     <h:form styleClass="log">
-         <span class="log">
+         <span>
         <h:outputText value="Email" style="color: #22285D;"/>
    <h:inputText id="userEmail" value="#{ctrl.ulog.email}" a:placeholder="Your Email" styleClass="input"></h:inputText>
    <br></br>
    <h:outputText value="Password" style="color: #22285D;" />
              <h:inputSecret id="password" value="#{ctrl.ulog.password}" a:placeholder="Your Password" styleClass="input"></h:inputSecret>
    <br></br>
-   <p:commandButton action="#{ctrl.doLogin}"
-                    value="Login" style="color: #22285D;" styleClass="bouton"/>
+   <h:commandButton action="#{ctrl.doLogin}" value="Login" styleClass="bouton"/>
         </span>
     </h:form>
-
 </f:view>
 </html>

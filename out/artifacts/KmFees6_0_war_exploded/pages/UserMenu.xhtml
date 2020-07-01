@@ -10,72 +10,131 @@
 
 <h:head>
     <title>Main Menu</title>
-    <h:graphicImage library="img" value="../resources/img/PopSchool.png" styleClass="imgMenu"/>
 </h:head>
+<h:graphicImage library="img" value="../resources/img/PopSchool.png" styleClass="imgMenu"/>
 <br></br>
 <f:view>
-    <h:outputStylesheet library="css" name="Style.css" />
+    <h:outputStylesheet library="css" name="Style.css"/>
+    <p:tabView styleClass="tab">
+        <p:ajax event="tabChange" listener="#{tabbedView.onTabChange}"/>
+        <p:ajax event="tabClose" listener="#{tabbedView.onTabClose}"/>
 
-    <p:tabView styleClass="tab" orientation="center">
-    <p:ajax event="tabChange" listener="#{tabbedView.onTabChange}"/>
-    <p:ajax event="tabClose" listener="#{tabbedView.onTabClose}"/>
+        <p:tab title="Home" titleStyleClass="title">
+            <h:form>
+                <f:facet name="header">
+                    <h:outputText value="Here is what we have on you dude."/>
+                </f:facet>
+                <p:dataTable value="#{ctrl.ulog}" id="UserSelection">
+                    <p:column headerText="Id User">
+                        <h:outputText value="#{ctrl.ulog.idUser}"/>
+                    </p:column>
+                    <p:column headerText="Name">
+                        <h:outputText value="#{ctrl.ulog.name}"/>
+                    </p:column>
+                    <p:column headerText="Surname">
+                        <h:outputText value="#{ctrl.ulog.surname}"/>
+                    </p:column>
 
+                    <p:column headerText="Email">
+                        <h:outputText value="#{ctrl.ulog.email}"/>
+                    </p:column>
+
+                    <p:column headerText="Password">
+                        <h:outputText value="#{ctrl.ulog.password}"/>
+                    </p:column>
+                </p:dataTable>
+                <f:facet name="header">
+                    <h:outputText value="Your Addresses"/>
+                </f:facet>
+                <p:dataTable var="ad" value="#{ctrl.address}">
+                    <p:column headerText="Id Address">
+                        <h:outputText value="#{ad.idAddress}"/>
+                    </p:column>
+                    <p:column headerText="Number/Street">
+                        <h:outputText value="#{ad.numberStreet}"/>
+                    </p:column>
+                    <p:column headerText="Postcode">
+                        <h:outputText value="#{ad.postcode}"/>
+                    </p:column>
+                    <p:column headerText="City">
+                        <h:outputText value="#{ad.city}"/>
+                    </p:column>
+                </p:dataTable>
+                <p:dataTable var="ve" value="#{ctrl.vehicules}" id="tabSelection">
+                    <p:column headerText="Id Vehicule">
+                        <h:outputText value="#{ve.idVehicule}"/>
+                    </p:column>
+                    <p:column headerText="Brand/Model">
+                        <h:outputText value="#{ve.brand}"/>
+                    </p:column>
+
+                    <p:column headerText="Immatriculation">
+                        <h:outputText value="#{ve.imma}"/>
+                    </p:column>
+
+                    <p:column headerText="Power">
+                        <h:outputText value="#{ve.power}"/>
+                    </p:column>
+                </p:dataTable>
+                <br></br>
+            </h:form>
+        </p:tab>
         <c:if test="#{ctrl.ulog.admin==0 || ctrl.ulog.admin==1}">
-            <p:tab title="User Registration">
+            <p:tab title="User Registration" titleStyleClass="title">
                 <h:form>
-                <h:panelGrid columns="2">
-                    <f:facet name="header">
-                        <h:outputText value="User Registration"/>
-                    </f:facet>
-                    <h:outputText for="nameInput" value="UserName"/>
-                    <h:inputText id="nameInput"
-                                 value="#{ctrl.newUser.name}"
-                                 required="true" requiredMessage="Name Mandatory"
-                                 size="20" maxlength="30">
-                        <p:ajax update="outName"/>
-                    </h:inputText>
-                    <h:outputLabel for="surnameInput" value="User Surname"/>
-                    <h:inputText id="surnameInput"
-                                 value="#{ctrl.newUser.surname}"
-                                 required="true" requiredMessage="Surname Mandatory"
-                                 size="20" maxlength="30">
-                        <p:ajax update="outSurname"/>
-                    </h:inputText>
-                    <h:outputLabel for="emailInput" value="Email"/>
-                    <h:inputText id="emailInput"
-                                 value="#{ctrl.newUser.email}"
-                                 required="true" requiredMessage="Email Mandatory"
-                                 size="20" maxlength="30">
-                        <p:ajax update="outEmail"/>
-                    </h:inputText>
-                    <h:outputLabel for="passwordInput" value="Password"/>
-                    <h:inputText id="passwordInput"
-                                 value="#{ctrl.newUser.password}"
-                                 required="true" requiredMessage="Email Mandatory"
-                                 size="20" maxlength="30">
-                        <p:ajax update="outPassword"/>
-                    </h:inputText>
-                    <h:outputLabel for="rightsInput" value="Rights"/>
-                    <h:selectOneRadio id="rightsInput" value = "#{ctrl.newUser.admin}"
-                                      required="true" requiredMessage="Rights are mandatory">
-                        <f:selectItem itemValue = "0" itemLabel = "SuperAdmin" />
-                        <f:selectItem itemValue = "1" itemLabel = "Admin"/>
-                        <f:selectItem itemValue = "3" itemLabel = "User"/>
-                    </h:selectOneRadio>
-                    <h:panelGroup/>
-                    <h:commandButton action="#{ctrl.doRegNewUser}"
-                                     value="Register User"/>
-                    <h:panelGroup/>
-                    <h:outputText id="outName" value="#{ctrl.newUser.name}"/>
-                    <h:outputText id="outSurname" value="#{ctrl.newUser.surname}"/>
-                    <h:outputText id="outEmail" value="#{ctrl.newUser.email}"/>
-                    <h:outputText id="outPassword" value="#{ctrl.newUser.password}"/>
-                </h:panelGrid>
+                    <h:panelGrid columns="2">
+                        <f:facet name="header">
+                            <h:outputText value="User Registration"/>
+                        </f:facet>
+                        <h:outputText for="nameInput" value="UserName"/>
+                        <h:inputText id="nameInput"
+                                     value="#{ctrl.newUser.name}"
+                                     required="true" requiredMessage="Name Mandatory"
+                                     size="20" maxlength="30">
+                            <p:ajax update="outName"/>
+                        </h:inputText>
+                        <h:outputLabel for="surnameInput" value="User Surname"/>
+                        <h:inputText id="surnameInput"
+                                     value="#{ctrl.newUser.surname}"
+                                     required="true" requiredMessage="Surname Mandatory"
+                                     size="20" maxlength="30">
+                            <p:ajax update="outSurname"/>
+                        </h:inputText>
+                        <h:outputLabel for="emailInput" value="Email"/>
+                        <h:inputText id="emailInput"
+                                     value="#{ctrl.newUser.email}"
+                                     required="true" requiredMessage="Email Mandatory"
+                                     size="20" maxlength="30">
+                            <p:ajax update="outEmail"/>
+                        </h:inputText>
+                        <h:outputLabel for="passwordInput" value="Password"/>
+                        <h:inputText id="passwordInput"
+                                     value="#{ctrl.newUser.password}"
+                                     required="true" requiredMessage="Email Mandatory"
+                                     size="20" maxlength="30">
+                            <p:ajax update="outPassword"/>
+                        </h:inputText>
+                        <h:outputLabel for="rightsInput" value="Rights"/>
+                        <h:selectOneRadio id="rightsInput" value="#{ctrl.newUser.admin}"
+                                          required="true" requiredMessage="Rights are mandatory">
+                            <f:selectItem itemValue="0" itemLabel="SuperAdmin"/>
+                            <f:selectItem itemValue="1" itemLabel="Admin"/>
+                            <f:selectItem itemValue="3" itemLabel="User"/>
+                        </h:selectOneRadio>
+                        <h:panelGroup/>
+                        <h:commandButton action="#{ctrl.doRegNewUser}"
+                                         value="Register User"/>
+                        <h:panelGroup/>
+                        <h:outputText id="outName" value="#{ctrl.newUser.name}"/>
+                        <h:outputText id="outSurname" value="#{ctrl.newUser.surname}"/>
+                        <h:outputText id="outEmail" value="#{ctrl.newUser.email}"/>
+                        <h:outputText id="outPassword" value="#{ctrl.newUser.password}"/>
+                    </h:panelGrid>
                 </h:form>
             </p:tab>
         </c:if>
-            <p:tab title="Address Registration">
-                <h:form>
+        <p:tab title="Address Registration" titleStyleClass="title">
+            <h:form>
                 <h:panelGrid columns="2">
                     <f:facet name="header">
                         <h:outputText value="Address Registration"/>
@@ -101,51 +160,51 @@
                                      value="Register Address"/>
                     <h:panelGroup/>
                 </h:panelGrid>
-                </h:form>
-            </p:tab>
-        <p:tab title="Vehicule Registration">
+            </h:form>
+        </p:tab>
+        <p:tab title="Vehicule Registration" titleStyleClass="title">
             <h:form>
-                    <h:panelGrid columns="2">
-                        <f:facet name="header">
-                            <h:outputText value="Vehicule Registration"/>
-                        </f:facet>
-                <f:facet name="header">
-                    <h:outputText value="Vehicule Type"/>
-                </f:facet>
-                <h:outputLabel for="typeInput" value="Insert Vehicule type"/>
-                <h:selectOneRadio id="typeInput" value = "#{ctrl.newVehicule.vehiType}"
-                                  required="true" requiredMessage="Vehicule Type mandatory">
-                    <f:selectItem itemValue = "Motorcycle" itemLabel = "Motorcycle" />
-                    <f:selectItem itemValue = "Car" itemLabel = "Car"/>
-                    <f:selectItem itemValue = "Bicycle" itemLabel = "Bicycle"/>
-                </h:selectOneRadio>
-                        <h:outputLabel for="brandInput" value="Insert Vehicule Brand"/>
-                        <h:inputText id="brandInput"
-                                     value="#{ctrl.newVehicule.brand}"
-                                     required="true" requiredMessage="Vehicule Brand mandatory"
-                                     size="20" maxlength="30"/>
-                        <h:outputLabel for="immaInput" value="Insert Immatriculation"/>
-                        <h:inputText id="immaInput"
-                                     value="#{ctrl.newVehicule.imma}"
-                                     required="true" requiredMessage="Immatriculation Mandatory"
-                                     size="20" maxlength="30"/>
-                        <h:outputLabel for="powerInput" value="Insert Vehicule Power"/>
-                        <h:selectOneRadio id="powerInput" value = "#{ctrl.newVehicule.power}"
-                                          required="true" requiredMessage="Vehicule Power Mandatory">
-                            <f:selectItem itemValue = "3" itemLabel = "3cv or less" />
-                            <f:selectItem itemValue = "4" itemLabel = "4cv"/>
-                            <f:selectItem itemValue = "5" itemLabel = "5cv"/>
-                            <f:selectItem itemValue = "6" itemLabel = "6cv"/>
-                            <f:selectItem itemValue = "7" itemLabel = "7cv"/>
-                        </h:selectOneRadio>
-                        <h:commandButton action="#{ctrl.dovehiReg}"
-                                         value="Register Vehicule"/>
-                    </h:panelGrid>
+                <h:panelGrid columns="2">
+                    <f:facet name="header">
+                        <h:outputText value="Vehicule Registration"/>
+                    </f:facet>
+                    <f:facet name="header">
+                        <h:outputText value="Vehicule Type"/>
+                    </f:facet>
+                    <h:outputLabel for="typeInput" value="Insert Vehicule type"/>
+                    <h:selectOneRadio id="typeInput" value="#{ctrl.newVehicule.vehiType}"
+                                      required="true" requiredMessage="Vehicule Type mandatory">
+                        <f:selectItem itemValue="Motorcycle" itemLabel="Motorcycle"/>
+                        <f:selectItem itemValue="Car" itemLabel="Car"/>
+                        <f:selectItem itemValue="Bicycle" itemLabel="Bicycle"/>
+                    </h:selectOneRadio>
+                    <h:outputLabel for="brandInput" value="Insert Vehicule Brand"/>
+                    <h:inputText id="brandInput"
+                                 value="#{ctrl.newVehicule.brand}"
+                                 required="true" requiredMessage="Vehicule Brand mandatory"
+                                 size="20" maxlength="30"/>
+                    <h:outputLabel for="immaInput" value="Insert Immatriculation"/>
+                    <h:inputText id="immaInput"
+                                 value="#{ctrl.newVehicule.imma}"
+                                 required="true" requiredMessage="Immatriculation Mandatory"
+                                 size="20" maxlength="30"/>
+                    <h:outputLabel for="powerInput" value="Insert Vehicule Power"/>
+                    <h:selectOneRadio id="powerInput" value="#{ctrl.newVehicule.power}"
+                                      required="true" requiredMessage="Vehicule Power Mandatory">
+                        <f:selectItem itemValue="3" itemLabel="3cv or less"/>
+                        <f:selectItem itemValue="4" itemLabel="4cv"/>
+                        <f:selectItem itemValue="5" itemLabel="5cv"/>
+                        <f:selectItem itemValue="6" itemLabel="6cv"/>
+                        <f:selectItem itemValue="7" itemLabel="7cv"/>
+                    </h:selectOneRadio>
+                    <h:commandButton action="#{ctrl.dovehiReg}"
+                                     value="Register Vehicule"/>
+                </h:panelGrid>
             </h:form>
         </p:tab>
 
-            <p:tab title="Journey Registration">
-                <h:form>
+        <p:tab title="Journey Registration" titleStyleClass="title">
+            <h:form>
                 <h:panelGrid columns="2">
                     <f:facet name="header">
                         <h:outputText value="Journey Registration"/>
@@ -179,57 +238,26 @@
                                        itemLabel="#{v.brand}"
                                        itemValue="#{v.idVehicule}"/>
                     </h:selectOneMenu>
-                    <p:outputLabel for="button" value="Date:" />
-                    <p:calendar id="button" value="#{ctrl.dateJourney}" showOn="button" />
+                    <p:outputLabel for="button" value="Date:"/>
+                    <p:calendar id="button" value="#{ctrl.dateJourney}" showOn="button"/>
 
                     <h:outputLabel id="reasonJourney" value="Reason for travel"/>
-                    <h:inputTextarea id="reasonForTravel" value="#{ctrl.newJourney.reasonForTravel}" requiredMessage="Reason for travel Mandatory"/>
+                    <h:inputTextarea id="reasonForTravel" value="#{ctrl.newJourney.reasonForTravel}"
+                                     requiredMessage="Reason for travel Mandatory"/>
                     <h:panelGroup/>
                     <h:commandButton action="#{ctrl.doJourneyReg}"
                                      value="Register Journey"/>
                     <h:panelGroup/>
                 </h:panelGrid>
-                </h:form>
-            </p:tab>
-        </p:tabView>
-
-
-    <p:dataTable var="ve" value="#{ctrl.vehicules}" id="tabSelection">
-        <p:column headerText="Id Vehicule">
-            <h:outputText value="#{ve.idVehicule}" />
-        </p:column>
-        <p:column headerText="Brand/Model">
-            <h:outputText value="#{ve.brand}" />
-        </p:column>
-
-        <p:column headerText="Immatriculation">
-            <h:outputText value="#{ve.imma}" />
-        </p:column>
-
-        <p:column headerText="Power">
-            <h:outputText value="#{ve.power}" />
-        </p:column>
-    </p:dataTable>
-        <br></br>
-    <p:dataTable var="ad" value="#{ctrl.address}">
-         <p:column headerText="Id Address">
-             <h:outputText value="#{ad.idAddress}" />
-         </p:column>
-        <p:column headerText="Number/Street">
-            <h:outputText value="#{ad.numberStreet}" />
-        </p:column>
-        <p:column headerText="Postcode">
-            <h:outputText value="#{ad.postcode}" />
-        </p:column>
-        <p:column headerText="City">
-            <h:outputText value="#{ad.city}" />
-        </p:column>
-    </p:dataTable>
-        <br></br>
-    <h:form>
+            </h:form>
+        </p:tab>
+    </p:tabView>
+    <br></br>
+    <br></br>
+    <h:form styleClass="footer">
         <p:commandButton value="Acceuil" action="UserMenu"/>
-        <br></br>
         <p:commandButton value="Log Out" action="/index"/>
     </h:form>
+
 </f:view>
 </html>

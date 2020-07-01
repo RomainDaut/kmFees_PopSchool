@@ -6,7 +6,8 @@ import javax.persistence.Persistence;
 
 public class JPAUtil {
     private static EntityManagerFactory emf = null;
-    static{
+
+    static {
         try {
             emf = Persistence.createEntityManagerFactory("KmFeesPers");
 
@@ -14,9 +15,11 @@ public class JPAUtil {
             e.printStackTrace();
         }
     }
+
     public static EntityManager getEm() {
         return emf.createEntityManager();
     }
+
     public static EntityManagerFactory getEmf() {
         return emf;
     }

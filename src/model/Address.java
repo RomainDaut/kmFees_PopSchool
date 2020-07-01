@@ -7,7 +7,7 @@ import java.util.Objects;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name="findAllAddressByUser", query = "select a from Address a where a.users= :user "),
+        @NamedQuery(name = "findAllAddressByUser", query = "select a from Address a where a.users= :user "),
 })
 public class Address implements Serializable {
     private int idAddress;

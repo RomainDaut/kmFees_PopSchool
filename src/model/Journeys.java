@@ -15,8 +15,10 @@ public class Journeys implements Serializable {
     private Vehicules vehicules;
     private Address addressA;
     private Address addressB;
+
     public Journeys() {
     }
+
     public Journeys(String reasonForTravel, Date journeyDate, Vehicules vehicules, Address addressA, Address addressB) {
         this.reasonForTravel = reasonForTravel;
         this.journeyDate = journeyDate;
@@ -60,11 +62,13 @@ public class Journeys implements Serializable {
     public double getDistance() {
         return distance;
     }
+
     public void setDistance(double distance) {
         this.distance = distance;
     }
-    public void setRandomDistance(){
-        this.distance = Math.random()*240;
+
+    public void setRandomDistance() {
+        this.distance = Math.random() * 240;
     }
 
     @Basic
@@ -72,6 +76,7 @@ public class Journeys implements Serializable {
     public Date getJourneyDate() {
         return journeyDate;
     }
+
     public void setJourneyDate(Date journeyDate) {
         this.journeyDate = journeyDate;
     }
@@ -123,23 +128,23 @@ public class Journeys implements Serializable {
         this.addressB = addressB;
     }
 
-    public void costCalc(){
-        double c[] = {0.451,0.518,0.543,0.568,0.595};
+    public void costCalc() {
+        double[] c = {0.451, 0.518, 0.543, 0.568, 0.595};
         double nb = 0.00;
-        if(vehicules.getVehiType().equals("Car")){
+        if (vehicules.getVehiType().equals("Car")) {
 
             int pow = Integer.parseInt(vehicules.getPower());
-             nb = c[pow-3] * this.getDistance();
+            nb = c[pow - 3] * this.getDistance();
 
-        }else if(vehicules.getVehiType().equals("Motorcycle")){
-            if(vehicules.getPower().equals("1,2")){
+        } else if (vehicules.getVehiType().equals("Motorcycle")) {
+            if (vehicules.getPower().equals("1,2")) {
                 nb = 0.338 * distance;
-            }else if(vehicules.getPower().equals("3,5")){
+            } else if (vehicules.getPower().equals("3,5")) {
                 nb = 0.338 * distance;
-            }else if(vehicules.getPower().equals("5+")){
+            } else if (vehicules.getPower().equals("5+")) {
                 nb = 0.400 * distance;
             }
-        }else if(vehicules.getVehiType().equals("Bicycle")){
+        } else if (vehicules.getVehiType().equals("Bicycle")) {
             nb = 0.269 * distance;
         }
         this.cost = (double) Math.round(nb * 100) / 100;

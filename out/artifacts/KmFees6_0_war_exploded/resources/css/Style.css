@@ -1,4 +1,4 @@
-.input{
+.input {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -9,26 +9,28 @@
     height: 30px;
     font-size: 18px;
 }
-.log{
+
+.log {
     position: page;
-    text-align:center;
+    text-align: center;
 }
 
-.img{
+.img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     height: 400px;
     width: auto;
 }
-.imgMenu{
+
+.imgMenu {
     display: block;
     margin-left: auto;
     margin-right: auto;
     height: 200px;
-    width: auto;
 }
-.bouton{
+
+.bouton {
     border-radius: 20px;
     width: 150px;
     height: 50px;
@@ -36,5 +38,21 @@
     font-size: 18px;
 }
 
-.tab{
+.footer {
+    background-color: #22285D;
+    border-radius: 10px;
+}
+
+.tab {
+    background-color: #77B756 !important;
+    border-radius: 10px !important;
+}
+
+.title {
+    text-align-all: center;
+}
+
+.tabHeaderText {
+    color: #22285D;
+!important;
 }

@@ -9,20 +9,20 @@
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 <h:head>
     <title>Login</title>
-
+    <h:graphicImage library="img" value="resources/img/PopSchool.png" styleClass="img"/>
 </h:head>
-<h:graphicImage library="img" value="resources/img/PopSchool.png" styleClass="img"/>
 <f:view>
 
     <br></br>
-    <h:outputStylesheet library="css" name="Style.css" />
+    <h:outputStylesheet library="css" name="Style.css"/>
     <h:form styleClass="log">
          <span>
-        <h:outputText value="Email" style="color: #22285D;"/>
+
    <h:inputText id="userEmail" value="#{ctrl.ulog.email}" a:placeholder="Your Email" styleClass="input"></h:inputText>
    <br></br>
-   <h:outputText value="Password" style="color: #22285D;" />
-             <h:inputSecret id="password" value="#{ctrl.ulog.password}" a:placeholder="Your Password" styleClass="input"></h:inputSecret>
+
+             <h:inputSecret id="password" value="#{ctrl.ulog.password}" a:placeholder="Your Password"
+                            styleClass="input"></h:inputSecret>
    <br></br>
    <h:commandButton action="#{ctrl.doLogin}" value="Login" styleClass="bouton"/>
         </span>

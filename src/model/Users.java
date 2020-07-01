@@ -7,10 +7,11 @@ import java.util.Objects;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name="Users.findUserByEmail&Password",
+        @NamedQuery(name = "Users.findUserByEmail&Password",
                 query = "select u from Users u where lower(u.email)=:email and u.password=:password "),
         @NamedQuery(name = "Users.findByEmail", query = "select u from Users u where u.email=:email"),
-        @NamedQuery(name = "Users.findAllUsers", query = "select u from Users u")
+        @NamedQuery(name = "Users.findAllUsers", query = "select u from Users u"),
+        @NamedQuery(name = "Users.findAllUsersPassword", query = "select u from Users u where u.password=:password")
 })
 
 
